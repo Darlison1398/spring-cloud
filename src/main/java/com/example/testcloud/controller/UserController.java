@@ -24,5 +24,9 @@ public class UserController {
     public UserModel saveUser(@RequestBody UserModel userModel) {
         return user.save(userModel);
     }
+    @GetMapping("/users")
+    public List<UserModel> getUsers(UserModel userModel) {
+        return user.findAll();
+    }
     
 }
